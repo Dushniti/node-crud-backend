@@ -20,6 +20,9 @@ exports.createUser = async (req, res) => {
   res.status(201).json(newUser);
 };
 
+
+
+
 // Update a user
 exports.updateUser = async (req, res) => {
   const updatedUser = await User.findByIdAndUpdate(req.params.id, req.body, { new: true });
